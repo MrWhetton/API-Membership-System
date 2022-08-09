@@ -1,0 +1,23 @@
+{
+  "name": "api-membership-system",
+  "version": "1.0.0",
+  "description": "Synoptic Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrWhetton/API-Membership-System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrWhetton/API-Membership-System/issues"
+  },
+  "homepage": "https://github.com/MrWhetton/API-Membership-System#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
