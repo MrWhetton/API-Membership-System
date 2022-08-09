@@ -2,14 +2,14 @@
 
 <head>
   <link href="site.css" rel="stylesheet" />
-  <script src="site.js" defer></script>
+  <script src="index.js" defer></script>
 </head>
 
 <body>
   <h1>Welcome UserName please input your pin!</h1>
   <table classname="table">
     <tr>
-      <td><input type="button" value="clear" onclick="clr()" /> </td>
+      <td><input type="button" value="⌫" onclick="clear()" /> </td>
       <td colspan="3"><input type="text" id="textval" /> </td>
     </tr>
     <tr>
@@ -25,10 +25,10 @@
       <td><input type="button" value="8" onclick="display('8')" /></td>
     </tr>
     <tr>
-      <td><input type="button" value="quit" onclick="Quit()" /></td>
+      <td><input type="button" value="←" onclick="quit()" /></td>
       <td><input type="button" value="9" onclick="display('9')" /></td>
       <td><input type="button" value="0" onclick="display('0')" /></td>
-      <td><input type="button" value="enter" onclick="Confirm()" /></td>
+      <td><input type="button" value="↩︎" onclick="confirm()" /></td>
     </tr>
   </table>
 </body>
