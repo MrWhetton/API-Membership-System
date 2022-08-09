@@ -1,34 +1,9 @@
 <html>
-<style>
-  h1 {
-    text-align: center;
-    font-size: large;
-    color: black; 
-  }
-  table{
-    text-align: center;
-    position: absolute;
-    margin-left: 40%;
-    width: 20%;
-    height: 200px;
-  }
-  input[type="button"]{
-    border-radius: 5px;
-    background-color:rgb(232, 232, 240);
-    color: black;
-    border-color:black; 
-    width:100%;
-    height: 100%;
-  }
-  input[type="text"]{
-    border-radius: 10px;
-    text-align: right;
-    background-color:rgb(232, 232, 240);
-    color: black;
-    width:100%;
-    height: 100%;
-  }
-</style>
+
+<head>
+  <link href="site.css" rel="stylesheet" />
+  <script src="site.js" defer></script>
+</head>
 
 <body>
   <h1>Welcome UserName please input your pin!</h1>
@@ -50,10 +25,10 @@
       <td><input type="button" value="8" onclick="display('8')" /></td>
     </tr>
     <tr>
-      <td><input type="button" value="quit" onclick="display('X')" /></td>
+      <td><input type="button" value="quit" onclick="Quit()" /></td>
       <td><input type="button" value="9" onclick="display('9')" /></td>
       <td><input type="button" value="0" onclick="display('0')" /></td>
-      <td><input type="button" value="enter" onclick="display('Tick')" /></td>
+      <td><input type="button" value="enter" onclick="Confirm()" /></td>
     </tr>
   </table>
 </body>

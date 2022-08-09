@@ -4,71 +4,79 @@
       "employeeID": 1,
       "name": "Jan Doe",
       "email": "jandoe@google.co.uk",
-      "moblieNumber": "9999999999"
+      "moblieNumber": "9999999999",
+      "Money": "20"
     },
     {
       "employeeID": 2,
       "name": "Jan Doe",
       "email": "jandoe@google.co.uk",
-      "moblieNumber": "9999999999"
+      "moblieNumber": "9999999999",
+      "Money": "10"
     },
     {
       "employeeID": 3,
       "name": "Jan Doe",
       "email": "jandoe@google.co.uk",
-      "moblieNumber": "9999999999"
+      "moblieNumber": "9999999999",
+      "Money": "15"
     },
     {
       "employeeID": 4,
       "name": "Jan Doe",
       "email": "jandoe@google.co.uk",
-      "moblieNumber": "9999999999"
+      "moblieNumber": "9999999999",
+      "Money": "25"
     }
   ],
   "Card": [
     {
-      "CardID" : "q1w2e3r4t5y6u78i9o",
-      "Money": "20"
+      "CardID": "q1w2e3r4t5y6u78i9o",
+      "PIN": "1111",
+      "employeeID": 1
     },
     {
-      "CardID" : "asdfg45678jeobhe",
-      "Money": "10"
+      "CardID": "asdfg45678jeobhe",
+      "PIN": "2323",
+      "employeeID": 2
     },
     {
-      "CardID" : "p9nf63hrkvy4wif7",
-      "Money": "15"
+      "CardID": "p9nf63hrkvy4wif7",
+      
+      "PIN": "6567",
+      "employeeID": 3
     },
     {
-      "CardID" : "tuxbbodb4760dh3iv7",
-      "Money": "25"
+      "CardID": "tuxbbodb4760dh3iv7",
+      "PIN": "9464",
+      "employeeID": 4
     }
   ],
-  "CardRecords":[
+  "CardRecords": [
     {
       "CardRecordID": "ass123dfe",
       "Expenses": "20",
-      "DOT" : "8/8/2022"
+      "DOT": "8/8/2022"
     },
     {
       "CardRecordID": "gfeiughuh",
       "Expenses": "20",
-      "DOT" : "8/8/2022"
+      "DOT": "8/8/2022"
     },
     {
       "CardRecordID": "584757gudgu",
       "Expenses": "20",
-      "DOT" : "8/8/2022"
+      "DOT": "8/8/2022"
     },
     {
       "CardRecordID": "regii3452vs",
       "Expenses": "20",
-      "DOT" : "8/8/2022"
+      "DOT": "8/8/2022"
     }
   ],
-  "test":[
+  "test": [
     {
       "test": "data"
     }
   ]
-
 }
