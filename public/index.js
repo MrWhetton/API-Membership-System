@@ -6,7 +6,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 const { cardID } = params
 const quit = () => {
   localStorage.clear()
-  document.location = "/DemoCardList.html"
+  location = "/DemoCardList.html"
 }
 
 const textvalInput = document.querySelector("#textval")
@@ -30,7 +30,7 @@ else
       return fetch(`/Employee?employeeID=${employeeID}`)
       console.log(currentCard)
     })
-  
+    .then(result => result.json())
     .then(employee => {
       currentEmployee = employee[0]
       heading.innerText = `Welcome ${currentEmployee.name} please input your PIN!`

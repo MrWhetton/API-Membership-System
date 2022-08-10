@@ -2,7 +2,7 @@ debugger
 
 const quit = () => {
   localStorage.clear()
-  document.location = "/DemoCardList.html"
+  location = "/DemoCardList.html"
 }
 const employeeString = window.localStorage.getItem('currentEmployee')
   if (!employeeString)
