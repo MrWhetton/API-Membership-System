@@ -47,7 +47,6 @@ const enter = () => {
       window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
       document.location = 'TopUp.html'
 }
-//console.log(correctPIN)
 console.log(textvalInput)
-console.log(employee.name)
+console.log(fetch(`/Employee?employeeID=${employeeID}`))
 
