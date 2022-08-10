@@ -9,22 +9,22 @@
     },
     {
       "employeeID": 2,
-      "name": "Jan Doe",
-      "email": "jandoe@google.co.uk",
+      "name": "Mark Smith",
+      "email": "MarkSmith@google.co.uk",
       "moblieNumber": "9999999999",
       "Money": "10"
     },
     {
       "employeeID": 3,
-      "name": "Jan Doe",
-      "email": "jandoe@google.co.uk",
+      "name": "Emily Fog",
+      "email": "EmilyFog@google.co.uk",
       "moblieNumber": "9999999999",
       "Money": "15"
     },
     {
       "employeeID": 4,
-      "name": "Jan Doe",
-      "email": "jandoe@google.co.uk",
+      "name": "Richard Green",
+      "email": "RichardGreen@google.co.uk",
       "moblieNumber": "9999999999",
       "Money": "25"
     }
@@ -46,7 +46,7 @@
       "employeeID": 3
     },
     {
-      "CardID": "tuxbbodb4760dh3iv7",
+      "CardID": "tuxbbodb4760dh3i",
       "PIN": "9464",
       "employeeID": 4
     }
