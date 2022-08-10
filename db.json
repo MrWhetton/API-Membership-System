@@ -5,28 +5,28 @@
       "name": "Jan Doe",
       "email": "jandoe@google.co.uk",
       "moblieNumber": "9999999999",
-      "money": "20"
+      "money": 20
     },
     {
       "employeeID": 2,
       "name": "Mark Smith",
       "email": "MarkSmith@google.co.uk",
       "moblieNumber": "9999999999",
-      "money": "10"
+      "money": 10
     },
     {
       "employeeID": 3,
       "name": "Emily Fog",
       "email": "EmilyFog@google.co.uk",
       "moblieNumber": "9999999999",
-      "money": "15"
+      "money": 15
     },
     {
       "employeeID": 4,
       "name": "Richard Green",
       "email": "RichardGreen@google.co.uk",
       "moblieNumber": "9999999999",
-      "money": "25"
+      "money": 25
     }
   ],
   "Card": [
