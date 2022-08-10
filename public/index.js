@@ -4,7 +4,11 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 const { cardID } = params
-const quit = () => document.location = "/DemoCardList.html"
+const quit = () => {
+  localStorage.clear()
+  document.location = "/DemoCardList.html"
+}
+
 const textvalInput = document.querySelector("#textval")
 const heading = document.querySelector("h1")
 

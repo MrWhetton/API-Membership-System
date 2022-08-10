@@ -1,6 +1,9 @@
 debugger
 
-const quit = () => document.location = "/DemoCardList.html"
+const quit = () => {
+  localStorage.clear()
+  document.location = "/DemoCardList.html"
+}
 const employeeString = window.localStorage.getItem('currentEmployee')
   if (!employeeString)
     quit()
