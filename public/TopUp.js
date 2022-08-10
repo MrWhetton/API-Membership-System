@@ -1,55 +1,47 @@
 debugger
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
 
-const { cardID } = params
 const quit = () => document.location = "/DemoCardList.html"
+const employeeString = window.localStorage.getItem('currentEmployee')
+  if (!employeeString)
+    quit()
 const heading = document.querySelector("h1")
 const inputAmountValue = document.querySelector("#money")
 
-let currentEmployee = {}
-let currentBalance = {}
+const currentEmployee = JSON.parse(employeeString)
+if (!currentEmployee)
+  quit()
 
-// trying to fetch money from db.json // get request ?
-  fetch(`/Card?CardID=${cardID}`)
-    .catch(error => {
-      quit()
-    })
-    .then(result => result.json())
-    .then( money => {
-        currentBalance = money
-        return fetch(`/Employee?money=${money}`)
-      })
-    .then(result => result.json())
-    // trying to copy what i did on index.js
-    .then(Totalbalance => {
-      Totalbalance == currentBalance
-      heading.innerText = `current balance on card is ${Totalbalance} `
-    })
+let currentBalance = currentEmployee.money
+
+heading.innerText =`${currentEmployee.name} your current balance is £${currentBalance}`
 
 const display = (digit) => inputAmountValue.value += digit
 const clear = () => inputAmountValue.value = ""
 
 const enter = () => {
   const money = inputAmountValue.value
+  currentBalance += money 
   const MaxAmount = 50
-  if (money > MaxAmount)
-  return 
+  if (currentBalance  > MaxAmount){
     alert('input amount is over the personally limit')
     clear()
+    return
+  }
+
 
   // post request // the internet sucks on provide clear understanding of
   // post request without thrid party performing the it for you!!!!
-  /*
-  fetch(`'/employee/money'=${money}`)
-    .then( balanceUpdate => {
-      cosnt currentBalance = 
-      method: 'POST',
-      headers: {'Content-Type' : 'application/json'},
-      body: JSON.stringify(money))
-    } 
-    .catch ((error) {
-      console.log(`updated system`)
-    })*/
+  currentEmployee.money = currentBalance 
+  fetch('/employee/' + currentEmployee.id, { 
+    method: 'PUT',
+    headers: {'Content-Type' : 'application/json'},
+    body: JSON.stringify(currentEmployee)
+  })
+  .catch ((error) => {
+    alert(`something went wrong please try again (${error.message})`)
+  })
+  .then (_ => {
+    heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
+  })
+  
 }
