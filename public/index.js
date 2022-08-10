@@ -45,10 +45,8 @@ const enter = () => {
   if (!correctPIN)
     return clear()
   // if pin is correct
-  else if (correctPIN)
-    return 
-      window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
-      document.location = 'TopUp.html'
+  window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
+  document.location = 'TopUp.html'
 }
 console.log(textvalInput)
 
