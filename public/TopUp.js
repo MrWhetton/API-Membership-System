@@ -20,7 +20,7 @@ let currentBalance = {}
     .then(result => result.json())
     // trying to copy what i did on index.js
     .then(Totalbalance => {
-      Totalbalance = currentBalance
+      Totalbalance == currentBalance
       heading.innerText = `current balance on card is ${Totalbalance} `
     })
 
@@ -37,12 +37,15 @@ const enter = () => {
 
   // post request // the internet sucks on provide clear understanding of
   // post request without thrid party performing the it for you!!!!
-
-  let updateOfBalance = await fetch('/employee/money',{
-    method: 'POST',
-    headers: {
-      'Content-Type' : 'application/json'
-    },
-    body: JSON.stringify(money)
-  })
+  /*
+  fetch(`'/employee/money'=${money}`)
+    .then( balanceUpdate => {
+      cosnt currentBalance = 
+      method: 'POST',
+      headers: {'Content-Type' : 'application/json'},
+      body: JSON.stringify(money))
+    } 
+    .catch ((error) {
+      console.log(`updated system`)
+    })*/
 }
