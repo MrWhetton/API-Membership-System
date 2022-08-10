@@ -28,7 +28,7 @@ else
     .then(result => result.json())
     .then(employee => {
       currentEmployee = employee
-      heading.innerText = `Welcome ${Employee.name} please input your PIN!`
+      heading.innerText = `Welcome ${employee.name} please input your PIN!`
     })
 
 
@@ -47,5 +47,7 @@ const enter = () => {
       window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
       document.location = 'TopUp.html'
 }
-
+console.log(correctPIN)
+console.log(textvalInput)
+console.log(employee.name)
 
