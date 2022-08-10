@@ -40,7 +40,9 @@ const enter = () => {
   const correctPIN = (currentCard.PIN == pin)
   if (!correctPIN)
     return clear()
-
+  // unsure of !
+  else if (correctPIN)
+    return 'TopUp.html'
   // pin is correct
   window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
   document.location = 'TopUp.html'
