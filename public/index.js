@@ -1,3 +1,4 @@
+debugger
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -24,11 +25,13 @@ else
       currentCard = card
       const { employeeID } = card
       return fetch(`/Employee?employeeID=${employeeID}`)
+      console.log(currentCard)
     })
     .then(result => result.json())
     .then(employee => {
       currentEmployee = employee
       heading.innerText = `Welcome ${employee.name} please input your PIN!`
+      console.log(employee.name)
     })
 
 
@@ -48,5 +51,6 @@ const enter = () => {
       document.location = 'TopUp.html'
 }
 console.log(textvalInput)
-console.log(fetch(`/Employee?employeeID=${employeeID}`))
+
+
 
