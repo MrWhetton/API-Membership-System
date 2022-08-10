@@ -1,4 +1,4 @@
-debugger
+// debugger - to help test in source code on inspect on the hmtl
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -10,7 +10,6 @@ const heading = document.querySelector("h1")
 
 let currentCard = {}
 let currentEmployee = {}
-
 
 if (!cardID)
   quit()
@@ -48,7 +47,7 @@ const enter = () => {
   window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
   document.location = 'TopUp.html'
 }
-console.log(textvalInput)
+
 
 
 
