@@ -38,14 +38,14 @@ const clear = () => textvalInput.value = ""
 const enter = () => {
   const pin = textvalInput.value
   const correctPIN = (currentCard.PIN == pin)
+  // if pin is false
   if (!correctPIN)
     return clear()
-  // unsure of !
+  // if pin is correct
   else if (correctPIN)
-    return true
-  // pin is correct
-  window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
-  document.location = 'TopUp.html'
+    return 
+      window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
+      document.location = 'TopUp.html'
 }
 
 
