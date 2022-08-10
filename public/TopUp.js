@@ -8,7 +8,7 @@ const employeeString = window.localStorage.getItem('currentEmployee')
   if (!employeeString)
     quit()
 const heading = document.querySelector("h1")
-const inputAmountValue = document.querySelector("#money")
+const inputAmountValue = document.querySelector("#inputAmountValue")
 
 const currentEmployee = JSON.parse(employeeString)
 if (!currentEmployee)
