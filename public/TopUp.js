@@ -27,6 +27,7 @@ const enter = () => {
   const MaxAmount = 50
   if (currentBalance  > MaxAmount){
     alert('input amount is over the personally limit')
+    currentBalance -= money
     clear()
     return
   }
