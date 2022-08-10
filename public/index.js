@@ -28,7 +28,7 @@ else
     .then(result => result.json())
     .then(employee => {
       currentEmployee = employee
-      heading.innerText = `Welcome ${employee.name} please input your PIN!`
+      heading.innerText = `Welcome ${Employee.name} please input your PIN!`
     })
 
 
