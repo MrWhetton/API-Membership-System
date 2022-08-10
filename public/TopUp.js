@@ -23,11 +23,11 @@ const clear = () => inputAmountValue.value = ""
 
 const enter = () => {
   const money = inputAmountValue.value
-  currentBalance += money 
+  currentBalance += 1 * money 
   const MaxAmount = 50
   if (currentBalance  > MaxAmount){
     alert('input amount is over the personally limit')
-    currentBalance -= money
+    currentBalance -= 1 * money
     clear()
     return
   }
