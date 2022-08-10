@@ -26,7 +26,7 @@ else
       return fetch(`/Employee?employeeID=${employeeID}`)
       console.log(currentCard)
     })
-    .then(result => result.json())
+  
     .then(employee => {
       currentEmployee = employee[0]
       heading.innerText = `Welcome ${currentEmployee.name} please input your PIN!`
@@ -44,7 +44,7 @@ const enter = () => {
   if (!correctPIN)
     return clear()
   // if pin is correct
-  window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
+  window.localStorage.setItem('currentEmployee', JSON.stringify(currentEmployee))
   document.location = 'TopUp.html'
 }
 
