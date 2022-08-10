@@ -23,15 +23,15 @@ else
     .then(result => result.json())
     .then(card => {
       currentCard = card[0]
-      const { employeeID } = card
+      const { employeeID } = currentCard
       return fetch(`/Employee?employeeID=${employeeID}`)
       console.log(currentCard)
     })
     .then(result => result.json())
     .then(employee => {
       currentEmployee = employee[0]
-      heading.innerText = `Welcome ${employee.name} please input your PIN!`
-      console.log(employee.name)
+      heading.innerText = `Welcome ${currentEmployee.name} please input your PIN!`
+      console.log(currentEmployee.name)
     })
 
 
