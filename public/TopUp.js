@@ -12,9 +12,6 @@ let currentEmployee = {}
 let currentBalance = {}
 
 // trying to fetch money from db.json // get request ?
-if (!cardID)
-  quit()
-else
   fetch(`/Card?CardID=${cardID}`)
     .catch(error => {
       quit()
