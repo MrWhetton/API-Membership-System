@@ -12,7 +12,14 @@ let currentEmployee = {}
 let currentBalance = {}
 
 // trying to fetch money from db.json // get request ?
-  fetch(`/Employee?employeeID=${employeeID}`)
+if (!cardID)
+  quit()
+else
+  fetch(`/Card?CardID=${cardID}`)
+    .catch(error => {
+      quit()
+    })
+    .then(result => result.json())
     .then( money => {
         currentBalance = money
         return fetch(`/Employee?money=${money}`)
