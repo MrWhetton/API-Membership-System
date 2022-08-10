@@ -42,7 +42,7 @@ const enter = () => {
     return clear()
   // unsure of !
   else if (correctPIN)
-    return 'TopUp.html'
+    return true
   // pin is correct
   window.localStorage['currentEmployee'] = JSON.stringify(currentEmployee)
   document.location = 'TopUp.html'
