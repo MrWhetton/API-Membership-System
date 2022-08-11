@@ -32,6 +32,9 @@ const enter = () => {
     return
   }
   // Put Http request - to pull money
+  // doesn't up the API though
+
+  // https://membership-system-api-project.herokuapp.com/db.json ? 
   currentEmployee.money = currentBalance 
   fetch('/employee/' + currentEmployee.id, { 
     method: 'PUT',
@@ -44,14 +47,6 @@ const enter = () => {
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
   })
-  //.then(result => result.json())
-  // update method to restful api 
-  //not quite right!
-  
-  fetch(`/employee/` + currentEmployee.id,{
-    method: 'POST',
-    headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(currentEmployee)
-  })
-  .then((response) => response.json())
+  // see if this update the employee data in DB
+  .then (currentEmployee => this.setState(currentEmployee))
 }
