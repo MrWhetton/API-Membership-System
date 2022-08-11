@@ -36,7 +36,7 @@ const enter = () => {
 
   // https://membership-system-api-project.herokuapp.com/db.json ? 
   currentEmployee.money = currentBalance 
-  fetch('/employee/' + currentEmployee.id, { 
+  fetch('/employee/' + currentEmployee.employeeID, { 
     method: 'PUT',
     headers: {'Content-Type' : 'application/json'},
     body: JSON.stringify(currentEmployee)
