@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-
+console.log("express has run")
 const server = express()
 console.log("express has run")
 //const server = express.create();
