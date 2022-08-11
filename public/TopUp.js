@@ -39,7 +39,7 @@ const enter = () => {
   fetch('/employee/' + currentEmployee.id, { 
     method: 'PUT',
     headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(currentEmployee)
+    body: JSON.stringify(employeeString)
   })
   .catch ((error) => {
     alert(`something went wrong please try again (${error.message})`)
@@ -47,11 +47,11 @@ const enter = () => {
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
   })
-  fetch('/employee' +currentEmployee.id, {
+  /*fetch('/employee' +currentEmployee.id, {
     method: 'PUT', 
     headers: {'Content-Type' : 'application/json'},
     body: JSON.stringify(employeeString + currentEmployee)
-  })
+  })*/
   // see if this update the employee data in DB
   //.then (currentEmployee => this.setState(currentEmployee))
   // idea's 
