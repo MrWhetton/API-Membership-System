@@ -50,6 +50,6 @@ const enter = () => {
   fetch(`/employee/` + currentEmployee.id,{
     method: 'Update',
     headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(currentEmployee)
+    body: JSON.stringify(currentBalance)
   })
 }
