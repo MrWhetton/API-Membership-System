@@ -47,6 +47,15 @@ const enter = () => {
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
   })
+  fetch('/employee' +currentEmployee.id, {
+    method: 'PUT', 
+    headers: {'Content-Type' : 'application/json'},
+    body: JSON.stringify(employeeString + currentEmployee)
+  })
   // see if this update the employee data in DB
-  .then (currentEmployee => this.setState(currentEmployee))
+  //.then (currentEmployee => this.setState(currentEmployee))
+  // idea's 
+  // update for employeeString
+  // make fetch request for employeeString
+  // currentEmpployee.money == currentBalance
 }
