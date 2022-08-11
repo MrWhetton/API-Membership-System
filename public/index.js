@@ -26,7 +26,7 @@ else
     .then(result => result.json())
     .then(card => {
       currentCard = card[0]
-      const { employeeID } = currentCard
+      const { Employee } = currentCard
       return fetch(`/Employee/${employeeID}`)
       console.log(currentCard)
     })
