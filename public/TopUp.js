@@ -36,10 +36,10 @@ const enter = () => {
 
   // https://membership-system-api-project.herokuapp.com/db.json ? 
   currentEmployee.money = currentBalance 
-  fetch('/employee?employeeID=' + currentEmployee.employeeID, { 
-    method: 'PUT',
+  fetch('/employee/' + currentEmployee.employeeID, { 
+    method: 'PATCH',
     headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(currentEmployee)
+    body: JSON.stringify({money: currentBalance})
   })
   .catch ((error) => {
     alert(`something went wrong please try again (${error.message})`)
