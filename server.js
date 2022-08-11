@@ -1,6 +1,9 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const server = express.create();
+
+const server = express()
+console.log("express has run")
+//const server = express.create();
 const router = express.router('db.json');
 const middlewares = express.defaults({
   static : 'public', 
