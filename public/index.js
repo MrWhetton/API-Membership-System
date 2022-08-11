@@ -38,7 +38,10 @@ else
     })
 
 
-const display = (digit) => textvalInput.value += digit
+const display = (digit) => {
+  textvalInput.value += digit
+  console.log('textvalInput.value', textvalInput.value)
+}
 const clear = () => textvalInput.value = ""
 
 const enter = () => {
