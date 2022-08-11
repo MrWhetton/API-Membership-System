@@ -42,7 +42,10 @@ const display = (digit) => {
   textvalInput.value += digit
   console.log('textvalInput.value', textvalInput.value)
 }
-const clear = () => textvalInput.value = ""
+const clear = () => {
+  textvalInput.value = ""
+  console.log('textvalInput.value', textvalInput.value)
+}
 
 const enter = () => {
   const pin = textvalInput.value
