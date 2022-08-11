@@ -47,9 +47,11 @@ const enter = () => {
   //.then(result => result.json())
   // update method to restful api 
   //not quite right!
+  
   fetch(`/employee/` + currentEmployee.id,{
-    method: 'Update',
+    method: 'POST',
     headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(currentBalance)
+    body: JSON.stringify(currentEmployee)
   })
+  .then((response) => response.json())
 }
