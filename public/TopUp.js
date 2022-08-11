@@ -31,10 +31,7 @@ const enter = () => {
     clear()
     return
   }
-
-
-  // post request // the internet sucks on provide clear understanding of
-  // post request without thrid party performing the it for you!!!!
+  // Put Http request - to pull money
   currentEmployee.money = currentBalance 
   fetch('/employee/' + currentEmployee.id, { 
     method: 'PUT',
@@ -47,13 +44,12 @@ const enter = () => {
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
   })
-  .then(result => result.json())
+  //.then(result => result.json())
+  // update method to restful api 
+  //not quite right!
   fetch(`/employee/` + currentEmployee.id,{
     method: 'Update',
     headers: {'Content-Type' : 'application/json'},
     body: JSON.stringify(currentEmployee)
   })
-
-  // update method to restful api 
-
 }
