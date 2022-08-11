@@ -4,7 +4,7 @@ const quit = () => {
   localStorage.clear()
   location = "/DemoCardList.html"
 }
-const employeeString = window.localStorage.getItem('currentEmployee')
+const employeeString = localStorage.getItem('currentEmployee')
   if (!employeeString)
     quit()
 const heading = document.querySelector("h1")
@@ -39,13 +39,14 @@ const enter = () => {
   fetch('/employee/' + currentEmployee.id, { 
     method: 'PUT',
     headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(employeeString)
+    body: JSON.stringify(currentEmployee)
   })
   .catch ((error) => {
     alert(`something went wrong please try again (${error.message})`)
   })
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
+    localStorage.setItem('currentEmployee', JSON.stringify(currentEmployee))
   })
   /*fetch('/employee' +currentEmployee.id, {
     method: 'PUT', 

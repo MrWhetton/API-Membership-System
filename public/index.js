@@ -54,7 +54,7 @@ const enter = () => {
   if (!correctPIN)
     return clear()
   // if pin is correct
-  window.localStorage.setItem('currentEmployee', JSON.stringify(currentEmployee))
+  localStorage.setItem('currentEmployee', JSON.stringify(currentEmployee))
   document.location = 'TopUp.html'
 }
 
