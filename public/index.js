@@ -18,7 +18,7 @@ let currentEmployee = {}
 if (!cardID)
   quit()
 else
-  fetch(`/Card?CardID=${cardID}`)
+  fetch(`/Card/${cardID}`)
     .catch(error => {
       //Takes you back to the DemoCardList Screen
       quit()
@@ -27,7 +27,7 @@ else
     .then(card => {
       currentCard = card[0]
       const { employeeID } = currentCard
-      return fetch(`/Employee?employeeID=${employeeID}`)
+      return fetch(`/Employee/${employeeID}`)
       console.log(currentCard)
     })
     .then(result => result.json())
