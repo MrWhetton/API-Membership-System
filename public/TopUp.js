@@ -31,10 +31,6 @@ const enter = () => {
     clearInput()
     return
   }
-  // Put Http request - to pull money
-  // doesn't up the API though
-
-  // https://membership-system-api-project.herokuapp.com/db.json ? 
   currentEmployee.money = currentBalance 
   fetch('/employee/' + currentEmployee.employeeID, { 
     method: 'PATCH',
@@ -49,15 +45,4 @@ const enter = () => {
     localStorage.setItem('currentEmployee', JSON.stringify(currentEmployee))
     clearInput()
   })
-  /*fetch('/employee' +currentEmployee.id, {
-    method: 'PUT', 
-    headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(employeeString + currentEmployee)
-  })*/
-  // see if this update the employee data in DB
-  //.then (currentEmployee => this.setState(currentEmployee))
-  // idea's 
-  // update for employeeString
-  // make fetch request for employeeString
-  // currentEmpployee.money == currentBalance
 }
