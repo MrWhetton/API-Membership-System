@@ -47,5 +47,13 @@ const enter = () => {
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
   })
-  
+  .then(result => result.json())
+  fetch(`/employee/` + currentEmployee.id,{
+    method: 'Update',
+    headers: {'Content-Type' : 'application/json'},
+    body: JSON.stringify(currentEmployee)
+  })
+
+  // update method to restful api 
+
 }
