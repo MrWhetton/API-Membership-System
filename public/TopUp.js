@@ -19,7 +19,7 @@ let currentBalance = currentEmployee.money
 heading.innerText =`${currentEmployee.name} your current balance is £${currentBalance}`
 
 const display = (digit) => inputAmountValue.value += digit
-const clear = () => inputAmountValue.value = ""
+const clearInput = () => inputAmountValue.value = ""
 
 const enter = () => {
   const money = inputAmountValue.value
@@ -28,7 +28,7 @@ const enter = () => {
   if (currentBalance  > MaxAmount){
     alert('input amount is over the personally limit')
     currentBalance -= 1 * money
-    clear()
+    clearInput()
     return
   }
   // Put Http request - to pull money
@@ -47,6 +47,7 @@ const enter = () => {
   .then (_ => {
     heading.innerText =`${currentEmployee.name} your current new balance is £${currentBalance}`
     localStorage.setItem('currentEmployee', JSON.stringify(currentEmployee))
+    clearInput()
   })
   /*fetch('/employee' +currentEmployee.id, {
     method: 'PUT', 
