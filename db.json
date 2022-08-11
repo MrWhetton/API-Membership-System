@@ -1,80 +1,85 @@
 {
-  "Employee": {
-    "1": {
+  "Employee": [
+    {
       "employeeID": 1,
       "name": "Jan Doe",
       "email": "jandoe@google.co.uk",
       "moblieNumber": "9999999999",
       "money": 20
     },
-    "2": {
+    {
       "employeeID": 2,
       "name": "Mark Smith",
       "email": "MarkSmith@google.co.uk",
       "moblieNumber": "9999999999",
       "money": 10
     },
-    "3": {
+    {
       "employeeID": 3,
       "name": "Emily Fog",
       "email": "EmilyFog@google.co.uk",
       "moblieNumber": "9999999999",
       "money": 15
     },
-    "4": {
+    {
       "employeeID": 4,
       "name": "Richard Green",
       "email": "RichardGreen@google.co.uk",
       "moblieNumber": "9999999999",
       "money": 25
     }
-  }, 
-  "Card": {
-    "q1w2e3r4t5y6u78i9o":{
+  ],
+  "Card": [
+    {
       "CardID": "q1w2e3r4t5y6u78i9o",
       "PIN": "1111",
       "employeeID": 1
     },
-    "asdfg45678jeobhe":{
+    {
       "CardID": "asdfg45678jeobhe",
       "PIN": "2323",
       "employeeID": 2
     },
-    "p9nf63hrkvy4wif7":{
+    {
       "CardID": "p9nf63hrkvy4wif7", 
       "PIN": "6567",
       "employeeID": 3
     },
-    "tuxbbodb4760dh3i":{
+    {
       "CardID": "tuxbbodb4760dh3i",
       "PIN": "9464",
       "employeeID": 4
     }
-  },
-  "CardRecords": {
-    "ass123dfe":{
+  ],
+  "CardRecords": [
+    {
       "CardRecordID": "ass123dfe",
       "Transaction": "",
       "TansactionDate": "8/8/2022",
       "CardID" : "q1w2e3r4t5y6u78i9o"
     },
-    "gfeiughuh":{
-      "CardRecordID": "ass123dfe",
+    {
+      "CardRecordID": "gfeiughuh",
       "Transaction": "",
       "TansactionDate": "8/8/2022",
-      "CardID" : "q1w2e3r4t5y6u78i9o"
+      "CardID" : "asdfg45678jeobhe"
     },
-    "584757gudgu":{
+    {
       "CardRecordID": "584757gudgu",
       "Transaction": "",
       "TansactionDate": "8/8/2022",
       "CardID" : "p9nf63hrkvy4wif7"
     },
-    "regii3452vs":{
+    {
       "CardRecordID": "regii3452vs",
       "Transaction": "",
       "TansactionDate": "8/8/2022",
       "CardID" : "tuxbbodb4760dh3i"
     }
-  }
+  ],
+  "test": [
+    {
+      "test": "data"
+    }
+  ]
 }
