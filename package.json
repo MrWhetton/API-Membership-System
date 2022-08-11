@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/MrWhetton/API-Membership-System#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "json-server": "^0.17.0"
   }
 }
