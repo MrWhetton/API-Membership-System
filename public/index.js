@@ -6,7 +6,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 const { cardID } = params
 const quit = () => {
   localStorage.clear()
-  alert(`Goodbye ${currentEmployee.name}}`)
+  alert(`Goodbye ${currentEmployee.name}`)
   location = "/DemoCardList.html"
 }
 
