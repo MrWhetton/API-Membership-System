@@ -21,7 +21,7 @@ if (!cardID)
 else
   fetch(`/Card/${cardID}`)
     .catch(error => {
-      alert("Card need's to be registered")
+      //alert("Card need's to be registered")
       quit()
     })
     .then(result => result.json())
