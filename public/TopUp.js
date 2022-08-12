@@ -47,3 +47,5 @@ const enter = () => {
     clearInput()
   })
 }
+
+setTimeout(quit, 100 * 2 * 60)
