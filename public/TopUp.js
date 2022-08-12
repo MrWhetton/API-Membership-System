@@ -12,7 +12,9 @@ const heading = document.querySelector("h1")
 const inputAmountValue = document.querySelector("#inputAmountValue")
 
 const currentEmployee = JSON.parse(employeeString)
-if (!currentEmployee)
+if (!currentEmployee){
+  alert('card not registered on system')
+  }
   quit()
 
 let currentBalance = currentEmployee.money
