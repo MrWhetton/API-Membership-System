@@ -15,8 +15,10 @@ const heading = document.querySelector("h1")
 let currentCard = {}
 let currentEmployee = {}
 
-if (!cardID)
-  quit()
+if (!cardID){
+  alert("Card need's to be registered")
+  quit() 
+  }  
 else
   fetch(`/Card/${cardID}`)
     .catch(error => {
