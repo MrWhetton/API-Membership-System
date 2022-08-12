@@ -5,7 +5,9 @@ const quit = () => {
   location = "/DemoCardList.html"
 }
 const employeeString = localStorage.getItem('currentEmployee')
-  if (!employeeString)
+  if (!employeeString){
+    alert("Card need's to be registered")
+  }
     quit()
 const heading = document.querySelector("h1")
 const inputAmountValue = document.querySelector("#inputAmountValue")
