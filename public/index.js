@@ -4,9 +4,9 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 const { cardID } = params
-const quit = () => {
+const quit = (message) => {
   localStorage.clear()
-  alert(`Goodbye ${currentEmployee.name}`)
+  alert(message ?? `Goodbye ${currentEmployee.name ?? ''}`)
   location = "/DemoCardList.html"
 }
 
@@ -17,7 +17,7 @@ let currentCard = {}
 let currentEmployee = {}
 
 if (!cardID)
-  quit() 
+  quit('How did get here with no card number?? Goodbye.') 
 
 else
   fetch(`/Card/${cardID}`)
@@ -26,7 +26,7 @@ else
     })
     .then(result => {
       if(!result.ok){
-        alert("Card needs to be registered")
+        alert()
         quit()
         return
       }
