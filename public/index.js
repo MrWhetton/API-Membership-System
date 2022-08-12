@@ -15,14 +15,13 @@ const heading = document.querySelector("h1")
 let currentCard = {}
 let currentEmployee = {}
 
-if (!cardID){
-  alert("Card need's to be registered")
+if (!cardID)
   quit() 
-  }  
+
 else
   fetch(`/Card/${cardID}`)
     .catch(error => {
-      //Takes you back to the DemoCardList Screen
+      alert("Card need's to be registered")
       quit()
     })
     .then(result => result.json())
