@@ -6,6 +6,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 const { cardID } = params
 const quit = () => {
   localStorage.clear()
+  setTimeout=(quit, 100 * 2 * 60)
   alert(`Goodbye ${currentEmployee.name}`)
   location = "/DemoCardList.html"
 }
@@ -39,7 +40,7 @@ else
       console.log(currentEmployee.name)
     })
 
-setTimeout=(quit, 100 * 2 * 60)
+
 
 const display = (digit) => {
   textvalInput.value += digit
