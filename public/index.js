@@ -22,7 +22,7 @@ if (!cardID)
 else
   fetch(`/Card/${cardID}`)
     .catch(error => {
-      //alert("Card need's to be registered")
+      //alert("Card needs to be registered")
       quit()
     })
     .then(result => result.json())
@@ -39,7 +39,7 @@ else
       console.log(currentEmployee.name)
     })
 
-    setTimeout=(quit, 100 * 2 * 60)
+setTimeout(quit, 100 * 2 * 60)
 
 const display = (digit) => {
   textvalInput.value += digit
