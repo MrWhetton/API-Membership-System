@@ -48,4 +48,4 @@ const enter = () => {
   })
 }
 
-setTimeout(quit, 100 * 2 * 60)
+setTimeout(quit, 1000 * 2 * 60)
