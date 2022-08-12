@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 debugger
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
@@ -22,10 +24,16 @@ if (!cardID)
 else
   fetch(`/Card/${cardID}`)
     .catch(error => {
-      alert("Card needs to be registered")
       quit()
     })
-    .then(result => result.json())
+    .then(result => {
+      if(!result.ok){
+        alert("Card needs to be registered")
+        quit()
+        return
+      }
+      return result.json()      
+    })
     .then(card => {
       currentCard = card
       const { employeeID } = currentCard
@@ -38,7 +46,7 @@ else
       heading.innerText = `Welcome ${currentEmployee.name} please input your PIN!`
       console.log(currentEmployee.name)
     })
-.
+
 setTimeout(quit, 1000 * 2 * 60)
 
 const display = (digit) => {
