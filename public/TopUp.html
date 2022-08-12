@@ -1,34 +1,40 @@
 <html>
-  <head>
-    <link href="site.css" rel="stylesheet" />
-    <script src="TopUp.js" defer></script>
-  </head>
 
-  <body>
-    <h1>UserName please input amount you need?</h1>
+<head>
+  <link href="site.css" rel="stylesheet" />
+  <script src="TopUp.js" defer></script>
+</head>
+
+<body>
+  <h1>UserName please input amount you need?</h1>
   <table classname="table">
     <tr>
-      <td><input type="button" value="⌫" onclick="clearInput()" /> </td>
-      <td colspan="3"><input type="text" id="inputAmountValue" /> </td>
+      <td colspan="3"><input type="text" id="inputAmountValue"/> </td>
     </tr>
     <tr>
       <td><input type="button" value="1" onclick="display('1')" /></td>
       <td><input type="button" value="2" onclick="display('2')" /></td>
       <td><input type="button" value="3" onclick="display('3')" /></td>
-      <td><input type="button" value="4" onclick="display('4')" /></td>
+      <td><input type="button" value="✗" onclick="quit()" /></td>
     </tr>
     <tr>
+      <td><input type="button" value="4" onclick="display('4')" /></td>
       <td><input type="button" value="5" onclick="display('5')" /></td>
       <td><input type="button" value="6" onclick="display('6')" /></td>
-      <td><input type="button" value="7" onclick="display('7')" /></td>
-      <td><input type="button" value="8" onclick="display('8')" /></td>
+      <td><input type="button" value="←" onclick="clearInput()"/></td>
     </tr>
     <tr>
-      <td><input type="button" value="←" onclick="quit()" /></td>
+      <td><input type="button" value="7" onclick="display('7')" /></td>
+      <td><input type="button" value="8" onclick="display('8')" /></td>
       <td><input type="button" value="9" onclick="display('9')" /></td>
+      <td><input type="button" value="✓" onclick="enter()" /></td>
+    </tr>
+    <tr>
+      <td></td>
       <td><input type="button" value="0" onclick="display('0')" /></td>
-      <td><input type="button" value="↩︎" onclick="enter()" /></td>
+      <td></td>
     </tr>
   </table>
-  </body>
+</body>
+
 </html>
