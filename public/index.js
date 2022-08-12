@@ -39,7 +39,7 @@ else
       console.log(currentEmployee.name)
     })
 
-setTimeout=(quit, 1000 * 2 * 60)
+setTimeout=(quit, 100 * 2 * 60)
 
 const display = (digit) => {
   textvalInput.value += digit
