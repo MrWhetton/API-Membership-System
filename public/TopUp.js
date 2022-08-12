@@ -2,6 +2,7 @@ debugger
 
 const quit = () => {
   localStorage.clear()
+  alert(`Goodbye ${currentEmployee.name}`)
   location = "/DemoCardList.html"
 }
 const employeeString = localStorage.getItem('currentEmployee')
